@@ -5,11 +5,17 @@ namespace PierresVendors.Models
   public class Vendor
   {
     private static List<Vendor> _instances = new List<Vendor> {};
-    //getters & setters here
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public int Id { get; }
+    public List<Order> Orders { get; set; }
 
-    public Vendor(string categoryName)
+    public Vendor(string name, string description)
     {
-      //constructor goes here
+      Name = name;
+      Description = description;
+      Id = _instances.Count;
+      Orders = new List<Order>{};
     }
 
     public static void ClearAll()

@@ -16,7 +16,8 @@ namespace PierresVendors.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Model()
     {
-
+      Vendor newVendor = new Vendor("test vendor", "test description");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
 }
