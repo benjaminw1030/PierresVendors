@@ -127,4 +127,15 @@ body {
 
 .jumbotron {
   text-align: center;
+  margin-top: 5px;
+  padding: 30px;
+}
+
+img#bakery-img {
+  width: 100%;
+}
+
+.content {
+  width: 60%;
+  margin: auto;
 }

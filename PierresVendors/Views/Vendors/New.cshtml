@@ -5,39 +5,41 @@
 <div class="jumbotron">
   <h2>Add a vendor</h2>
 </div>
-<div class="form-body">
-  <div class="row">
-    <div class="form-holder">
-      <div class="form-content">
-        <div class="form-items">
-          <p>Enter vendor details below.</p>
-          <form action="/vendors" method="post" class="requires-validation" novalidate>
-
-            <div class="col-md-12">
-              <input id="vendorName" class="form-control" type="text" name="vendorName" placeholder="Name" required>
-              <div class="valid-feedback">Name field is valid!</div>
-              <div class="invalid-feedback">Name field cannot be blank!</div>
-            </div>
-
-            <div class="col-md-12">
-              <input id="vendorDescription" class="form-control" type="text" name="vendorDescription"
-                placeholder="Description of vendor" required>
-              <div class="valid-feedback">Description field is valid!</div>
-              <div class="invalid-feedback">Description field cannot be blank!</div>
-            </div>
-
-            <div class="form-button mt-3">
-              <button id="submit" type="submit" class="btn btn-primary">Add Vendor</button>
-            </div>
-          </form>
+<div class="content">
+  <div class="form-body">
+    <div class="row">
+      <div class="form-holder">
+        <div class="form-content">
+          <div class="form-items">
+            <p>Enter vendor details below.</p>
+            <form action="/vendors" method="post" class="requires-validation" novalidate>
+  
+              <div class="col-md-12">
+                <input id="vendorName" class="form-control" type="text" name="vendorName" placeholder="Name" required>
+                <div class="valid-feedback">Name field is valid!</div>
+                <div class="invalid-feedback">Name field cannot be blank!</div>
+              </div>
+  
+              <div class="col-md-12">
+                <input id="vendorDescription" class="form-control" type="text" name="vendorDescription"
+                  placeholder="Description of vendor" required>
+                <div class="valid-feedback">Description field is valid!</div>
+                <div class="invalid-feedback">Description field cannot be blank!</div>
+              </div>
+  
+              <div class="form-button mt-3">
+                <button id="submit" type="submit" class="btn btn-primary">Add Vendor</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
+  <ul>
+    <li><a href="/">Home.</a></li>
+    <li><a href="/vendors">Vendor list.</a></li>
+    <li><a href="/vendors/search_by_vendor">Search by vendor.</a></li>
+  </ul>
 </div>
-
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/vendors">Vendor list</a></li>
-  <li><a href="/vendors/search_by_vendor">Search by vendor</a></li>
-</ul>

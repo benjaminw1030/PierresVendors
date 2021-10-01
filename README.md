@@ -1,6 +1,6 @@
 # Pierre's Vendors and Orders
 
-#### Brief Description
+#### A program that creates a webpage written in C#
 
 #### By Benjamin Wilson
 
@@ -13,7 +13,7 @@
 
 ## Description
 
-Long Description
+This program will build and create a page using ASP.NET Core in the MVC pattern. It utilizes nested classes to simulate a site for a fictional bakery that would allow the owner to track vendors and their purchase prders by adding the details into the Order and Vendor objects. Please try out the post method to search by vendor as well.
 
 ## Setup/Installation Requirements
 
@@ -22,6 +22,7 @@ Long Description
 3. Open the new directory.
 4. Open a new terminal instance in the PierresVendors.Solution/PierresVendors directory.
 5. Type "dotnet build" in the terminal, then after completion type "dotnet run" to start the program.
+6. To view, navigate to http://localhost:5000 or https://localhost:5001 in any web browser.
 
 * To run model tests, navigate to PierresVendors.Solution/PierresVendors.Tests in the console and type "dotnet test".
 
