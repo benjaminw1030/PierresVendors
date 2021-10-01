@@ -1,0 +1,57 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="jumbotron">
+  <h3>Add a new order for @Model.Name</h3>
+</div>
+
+<div class="form-body">
+  <div class="row">
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items">
+          <p>Enter order data below.</p>
+          <form action="/vendors/{id}/orders/" method="post" class="requires-validation" novalidate>
+
+            <div class="col-md-12">
+              <input id="orderTitle" class="form-control" type="text" name="orderTitle" placeholder="Order Title"
+                required>
+              <div class="valid-feedback">Title field is valid!</div>
+              <div class="invalid-feedback">Title field cannot be blank!</div>
+            </div>
+
+            <div class="col-md-12">
+              <input id="orderDescription" class="form-control" type="text" name="orderDescription"
+                placeholder="Order Description" required>
+              <div class="valid-feedback">Description field is valid!</div>
+              <div class="invalid-feedback">Description field cannot be blank!</div>
+            </div>
+
+            <div class="col-md-12">
+              <input id="orderDate" class="form-control" type="text" name="orderDate" placeholder="Order Date" required>
+              <div class="valid-feedback">Date field is valid!</div>
+              <div class="invalid-feedback">Date field cannot be blank!</div>
+            </div>
+
+            <div class="col-md-12">
+              <input id="orderPrice" class="form-control" type="number" name="orderPrice" placeholder="Order Price"
+                required min="0">
+              <div class="valid-feedback">Price field is valid!</div>
+              <div class="invalid-feedback">Price field cannot be blank!</div>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="orderPriority" name="orderPriority">
+              <label class="form-check-label">Is this a priority order?</label>
+            </div>
+
+            <div class="form-button mt-3">
+              <button id="submit" type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

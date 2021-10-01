@@ -38,5 +38,23 @@ namespace PierresVendors.Controllers
       return View(model);
     }
 
+    [HttpPost("/vendors/{id}/orders")]
+    public ActionResult Create(int id, string orderTitle, string orderDescription, string orderDate, int orderPrice, string orderPriority)
+    {
+      bool priority = false;
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor foundVendor = Vendor.Find(id);
+      if (orderPriority == "checked")
+      {
+        priority = true;
+      }
+      Order newOrder = new Order(orderTitle, orderDescription, orderDate, orderPrice, priority);
+      foundVendor.AddOrder(newOrder);
+      List<Order> vendorOrders = foundVendor.Orders;
+      model.Add("vendor", foundVendor);
+      model.Add("orders", vendorOrders);
+      return View("Show", model);
+    }
+
   }
 }
