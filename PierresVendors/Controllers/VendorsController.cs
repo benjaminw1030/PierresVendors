@@ -20,6 +20,12 @@ namespace PierresVendors.Controllers
       return View();
     }
 
+    [HttpGet("/vendors/search_by_vendor")]
+    public ActionResult SearchByVendor()
+    {
+      return View();
+    }
+
     [HttpPost("/vendors")]
     public ActionResult Create(string vendorName, string vendorDescription)
     {
@@ -54,6 +60,23 @@ namespace PierresVendors.Controllers
       model.Add("vendor", foundVendor);
       model.Add("orders", vendorOrders);
       return View("Show", model);
+    }
+
+    [HttpPost("/vendors/search_results")]
+    public ActionResult SearchResults(string vendorName)
+    {
+      List<Vendor> searchResults = new List<Vendor>();
+      List<Vendor> allVendors = Vendor.GetAll();
+      string searchName = vendorName.ToLower();
+      foreach (Vendor vendor in allVendors)
+      {
+        string name = vendor.Name.ToLower();
+        if (name.Contains(searchName))
+        {
+          searchResults.Add(vendor);
+        }
+      }
+      return View(searchResults);
     }
 
   }

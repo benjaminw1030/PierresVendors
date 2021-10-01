@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="form-body">
+  <div class="row">
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items">
+          <p>Search by Vendor Name</p>
+          <form action="/vendors/search_results" method="post" class="requires-validation" novalidate>
+            <div class="col-md-12">
+              <input id="vendorName" class="form-control" type="text" name="vendorName" placeholder="Vendor Name" required>
+              <div class="valid-feedback">Vendor Name field is valid!</div>
+              <div class="invalid-feedback">Vendor Name field cannot be blank!</div>
+            </div>
+            <div class="form-button mt-3">
+              <button id="submit" type="submit" class="btn btn-primary">Add Vendor</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <li><a href="/">Home.</a></li>
+  <li><a href="/vendors">Vendor list.</a></li>
+  <li><a href="/vendors/new">Add a new vendor.</a></li>
+</ul>
