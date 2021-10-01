@@ -3,7 +3,7 @@
 }
 
 <div class="jumbotron">
-  <h3>Add a new order for @Model.Name</h3>
+  <h2>Add a new order for @Model.Name</h2>
 </div>
 
 <div class="form-body">
@@ -12,7 +12,7 @@
       <div class="form-content">
         <div class="form-items">
           <p>Enter order data below.</p>
-          <form action="/vendors/{id}/orders/" method="post" class="requires-validation" novalidate>
+          <form action="/vendors/@Model.Id/orders/" method="post" class="requires-validation" novalidate>
 
             <div class="col-md-12">
               <input id="orderTitle" class="form-control" type="text" name="orderTitle" placeholder="Order Title"
@@ -55,3 +55,9 @@
     </div>
   </div>
 </div>
+
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/vendors">Vendor List</a></li>
+  <li><a href="/vendors/@Model.Id">Back to Vendor</a></li>
+</ul>

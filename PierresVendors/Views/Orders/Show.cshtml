@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="jumbotron">
+  <h2>@Model["order"].Title</h2>
+  <p>Ordered from @Model["vendor"].Name</p>
+</div>
+<ul>
+  <li>Description: @Model["order"].Description</li>
+  <li>Price: $@Model["order"].Price</li>
+  <li>Ordered on: @Model["order"].Date</li>
+</ul>
+
+@if (Model["order"].Priority == true)
+{
+<p id="priority">This is a priority order.</p>
+}
+
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/vendors">Vendor List</a></li>
+  <li><a href='/vendors/@Model["vendor"].Id'>Back to Vendor</a></li>
+</ul>

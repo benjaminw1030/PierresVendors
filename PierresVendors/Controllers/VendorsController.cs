@@ -38,13 +38,13 @@ namespace PierresVendors.Controllers
       return View(model);
     }
 
-    [HttpPost("/vendors/{id}/orders")]
-    public ActionResult Create(int id, string orderTitle, string orderDescription, string orderDate, int orderPrice, string orderPriority)
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, string orderDate, int orderPrice, string orderPriority)
     {
       bool priority = false;
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor foundVendor = Vendor.Find(id);
-      if (orderPriority == "checked")
+      Vendor foundVendor = Vendor.Find(vendorId);
+      if (orderPriority == "on")
       {
         priority = true;
       }
