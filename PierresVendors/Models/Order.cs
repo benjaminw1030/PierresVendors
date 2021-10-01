@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 
-namespace Template.Models
+namespace PierresVendors.Models
 {
-  public class Model
+  public class Order
   {
-    private static List<Model> _instances = new List<Model> {};
+    private static List<Order> _instances = new List<Order> {};
     //getters & setters here
 
-    public Model(string categoryName)
+    public Order(string categoryName)
     {
       //constructor goes here
     }

@@ -1,20 +1,20 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Template.Models;
+using PierresVendors.Models;
 using System.Collections.Generic;
 using System;
 
-namespace Template.Tests
+namespace PierresVendors.Tests
 {
   [TestClass]
-  public class ModelTests : IDisposable
+  public class OrderTests : IDisposable
   {
     public void Dispose()
     {
-      Model.ClearAll();
+      Order.ClearAll();
     }
 
     [TestMethod]
-    public void ModelConstructor_CreatesInstanceOfModel_Model()
+    public void OrderConstructor_CreatesInstanceOfOrder_Model()
     {
 
     }
