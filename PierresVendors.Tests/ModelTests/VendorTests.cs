@@ -65,5 +65,23 @@ namespace PierresVendors.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string orderTitle = "Wheat Flour";
+      string orderDescription = "100 lbs of whole wheat flour.";
+      string orderDate = "10/1/2021";
+      int orderPrice = 200;
+      bool orderPriority = false;
+      Order newOrder = new Order(orderTitle, orderDescription, orderDate, orderPrice, orderPriority);
+      List<Order> newList = new List<Order> { newOrder };
+      string vendorName = "Frank's Flour";
+      string vendorDescription = "Sells the best flour.";
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
