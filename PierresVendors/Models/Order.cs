@@ -19,6 +19,7 @@ namespace PierresVendors.Models
       Date = date;
       Price = price;
       Priority = priority;
+      _instances.Add(this);
       Id = _instances.Count;
     }
 

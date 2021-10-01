@@ -14,7 +14,7 @@ namespace PierresVendors.Tests
     }
 
     [TestMethod]
-    public void OrderConstructor_CreatesInstanceOfOrder_Model()
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
       Order newOrder = new Order("test title", "test description", "test date", 0, true);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
