@@ -46,5 +46,25 @@ namespace PierresVendors.Tests
       Order newOrder = new Order(title, description, date, price, priority);
       Assert.AreEqual(1, newOrder.Id);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllOrders_Order()
+    {
+      string name01 = "Wheat Flour";
+      string description01 = "100 lbs of whole wheat flour.";
+      string date01 = "10/1/2021";
+      int price01 = 200;
+      bool priority01 = false;
+      string name02 = "Grade A Eggs";
+      string description02 = "1 gross of cage-free grade A chicken eggs.";
+      string date02 = "9/30/2021";
+      int price02 = 300;
+      bool priority02 = true;
+      Order newOrder1 = new Order(name01, description01, date01, price01, priority01);
+      Order newOrder2 = new Order(name02, description02, date02, price02, priority02);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
