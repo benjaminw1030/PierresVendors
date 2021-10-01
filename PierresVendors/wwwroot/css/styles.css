@@ -8,19 +8,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
-
 .form-holder {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
 }
 
 .form-holder .form-content {
@@ -53,7 +46,6 @@ html, body {
 }
 
 .form-content h3 {
-  color: #495056;
   text-align: left;
   font-size: 28px;
   font-weight: 600;
@@ -65,7 +57,6 @@ html, body {
 }
 
 .form-content p {
-  color: #495056;
   text-align: left;
   font-size: 17px;
   font-weight: 300;
@@ -78,35 +69,19 @@ html, body {
   color: #495056;
 }
 
-.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
+.form-content input[type=text], .form-content input[type=number], .form-content input[type=password], .form-content input[type=email], .form-content select {
   width: 100%;
   padding: 9px 20px;
   text-align: left;
-  border: 0;
+  border: 1px, solid, #495056;
   outline: 0;
   border-radius: 6px;
-  background-color: #495056;
   font-size: 15px;
   font-weight: 300;
-  color: #8D8D8D;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  margin-top: 16px;
-}
-
-
-.btn-primary{
-  background-color: #495056;
-  outline: none;
-  border: 0px;
-  box-shadow: none;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
-  background-color: #495056;
-  outline: none !important;
-  border: none !important;
-  box-shadow: none;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .form-content textarea {
@@ -115,11 +90,9 @@ html, body {
   padding: 8px 20px;
   border-radius: 6px;
   text-align: left;
-  background-color: #495056;
   border: 0;
   font-size: 15px;
   font-weight: 300;
-  color: #8D8D8D;
   outline: none;
   resize: none;
   height: 120px;
@@ -134,15 +107,29 @@ html, body {
   color: #8D8D8D;
 }
 
-.mv-up{
+.row {
+  justify-content: center;
+}
+
+.mv-up {
   margin-top: -9px !important;
   margin-bottom: 8px !important;
 }
 
-.invalid-feedback{
+.invalid-feedback,
+#priority {
   color: #ff606e;
 }
 
 .valid-feedback{
   color: #2acc80;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.content {
+  /* display: flex;
+  justify-content: center; */
 }
